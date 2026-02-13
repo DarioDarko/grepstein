@@ -193,5 +193,8 @@ fzf_opts=(
 file=$(get_all_urls | fzf "${fzf_opts[@]}")
 [[ -n "$file" ]] || exit 0
 
+file="${DOJ_URL}${file}"
+file="${file// /%20}"
+
 get_file "$file"
 less -R "$TMP_TXT"

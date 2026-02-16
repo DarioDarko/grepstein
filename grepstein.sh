@@ -120,7 +120,7 @@ fi
 
 # fzf option
 
-if ! command -v fzf &>/dev/null; then echo "fzf is not installed" 2>&1; exit 1; fi
+if ! command -v fzf &>/dev/null; then echo "fzf is not installed" >&2; exit 1; fi
 
 TMP_TXT="/tmp/epstein_file.txt"
 DOJ_URL="https://www.justice.gov/epstein/files/"
